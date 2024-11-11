@@ -8,4 +8,4 @@ if __name__ == "__main__":
     grupo_nacionalidades = set()
     grupo_nacionalidades.add("BULGARIA")
     donde_extranjeros = secciones_distritos_con_extranjeros_nacionalidades(datos,grupo_nacionalidades)
-    print(donde_extranjeros)
+    #print(donde_extranjeros)
