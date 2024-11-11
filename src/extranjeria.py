@@ -35,3 +35,9 @@ def total_extranjeros_por_pais(datos):
         else:
             res[i.pais] = (i.hombres + i.mujeres)
     return res
+
+def top_n_extranjeria(datos, n):
+    total_extranjeros = total_extranjeros_por_pais(datos)
+    lista_total_extranjeros = total_extranjeros.items()
+    res = sorted(lista_total_extranjeros,key = lambda x:x[1],reverse = True)
+    return res[:n]
