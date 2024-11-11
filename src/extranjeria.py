@@ -26,3 +26,12 @@ def secciones_distritos_con_extranjeros_nacionalidades(datos,paises):
         if i.pais in paises:
             res.append(tupladistrito(i.distrito, i.seccion))
     return sorted(res)
+
+def total_extranjeros_por_pais(datos):
+    res = dict()
+    for i in datos:
+        if i.pais in res:
+            res[i.pais] += (i.hombres + i.mujeres)
+        else:
+            res[i.pais] = (i.hombres + i.mujeres)
+    return res
